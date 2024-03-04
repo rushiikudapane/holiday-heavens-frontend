@@ -26,8 +26,8 @@ const printDocument = () => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     // Set the orientation based on the device
     const orientation = isMobile ? "p" : "l";
-    const pdf = new jsPDF(orientation, "pt", [canvas.height, canvas.width]);
-    pdf.addImage(imgData, "PNG", 0, 0, canvas.height, canvas.width);
+    const pdf = new jsPDF(orientation, "pt", [canvas.width, canvas.height]);
+    pdf.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height);
     pdf.save("holiday-heavens-quotation.pdf");
   });
 };

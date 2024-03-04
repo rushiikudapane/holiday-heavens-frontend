@@ -219,7 +219,7 @@ const Footer = ({ setCurrentDestination }) => {
           >
             created by{" "}
             <a
-              className="hover:text-cyan-700"
+              className="text-cyan-700 hover:text-white"
               href="https://www.linkedin.com/in/rushirajkudapane/"
             >
               Rushiraj Kudapane
