@@ -77,11 +77,10 @@ const Testimonials = () => {
                     className="mx-0 flex items-center gap-4 pt-0 pb-8"
                   >
                     <div className="flex w-full flex-col justify-center gap-0.5">
-                      <div className="flex items-center justify-between">
-                        <Typography variant="h5" color="blue-gray">
-                          {data.name}
-                        </Typography>
-                      </div>
+                      <Typography variant="h5" color="blue-gray">
+                        {data.name}
+                      </Typography>
+
                       <Typography
                         className="flex justify-start"
                         color="blue-gray"
@@ -120,11 +119,10 @@ const Testimonials = () => {
                     className="mx-0 flex items-center gap-4 pt-0 pb-8"
                   >
                     <div className="flex w-full flex-col justify-center gap-0.5">
-                      <div className="flex items-center justify-between">
-                        <Typography variant="h5" color="blue-gray">
-                          {data.name}
-                        </Typography>
-                      </div>
+                      <Typography variant="h5" color="blue-gray">
+                        {data.name}
+                      </Typography>
+
                       <Typography
                         className="flex justify-start"
                         color="blue-gray"
