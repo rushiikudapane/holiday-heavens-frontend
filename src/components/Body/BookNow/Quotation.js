@@ -22,8 +22,8 @@ const printDocument = () => {
     windowHeight: input.scrollHeight,
   }).then((canvas) => {
     const imgData = canvas.toDataURL("image/png");
-    const pdf = new jsPDF("l", "pt", [canvas.width, canvas.height]);
-    pdf.addImage(imgData, "PNG", 0, 0, canvas.height, canvas.width);
+    const pdf = new jsPDF("l", "pt", [canvas.height, canvas.width]);
+    pdf.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height);
     pdf.save("holiday-heavens-quotation.pdf");
   });
 };
