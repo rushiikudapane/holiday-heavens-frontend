@@ -218,7 +218,10 @@ const Footer = ({ setCurrentDestination }) => {
             className="text-white mt-7 text-center font-normal"
           >
             created by{" "}
-            <a href="https://www.linkedin.com/in/rushirajkudapane/">
+            <a
+              className="hover:text-cyan-700"
+              href="https://www.linkedin.com/in/rushirajkudapane/"
+            >
               Rushiraj Kudapane
             </a>
           </Typography>

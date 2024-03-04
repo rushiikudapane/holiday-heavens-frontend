@@ -23,12 +23,12 @@ const printDocument = () => {
   }).then((canvas) => {
     const imgData = canvas.toDataURL("image/png");
     const pdf = new jsPDF("l", "pt", [canvas.width, canvas.height]);
-    pdf.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height);
+    pdf.addImage(imgData, "PNG", 0, 0, canvas.height, canvas.width);
     pdf.save("holiday-heavens-quotation.pdf");
   });
 };
 
-const Quotation = () => {
+const Quotation = ({ currentDestination }) => {
   // const [adultCount, setAdultCount] = useState(0);
   // const [childCount, setChildCount] = useState(0);
   // const [totalCount, setTotalCount] = useState(0);
@@ -49,7 +49,7 @@ const Quotation = () => {
       <div className="flex flex-row flex-wrap bg-blue-50">
         <div className="lg:w-2/5 px-5 py-5 flex flex-col items-center">
           <div>
-            <img src={tempImg} className="w-96 h-80" />
+            <img src={currentDestination.set1Images[0]} className="w-96 h-80" />
           </div>
           <div className="my-8">
             <Typography variant="h3">{userData.destinationName}</Typography>
