@@ -106,7 +106,7 @@ const DestinationCards = ({ setCurrentDestination }) => {
                         >
                           <CardHeader floated={true} color="blue-gray">
                             <img
-                              src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                              src={destinationObject.set1Images[0]}
                               alt="ui/ux review check"
                             />
                             <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />

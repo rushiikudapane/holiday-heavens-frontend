@@ -154,7 +154,7 @@ const Footer = ({ setCurrentDestination }) => {
           <div className="flex gap-4 text-blue-gray-900 justify-center">
             <Typography
               as="a"
-              href="#"
+              href="https://facebook.com/"
               className="text-blue-900 opacity-80 transition-opacity hover:opacity-100 hover:text-blue-900"
             >
               <svg
@@ -172,7 +172,7 @@ const Footer = ({ setCurrentDestination }) => {
             </Typography>
             <Typography
               as="a"
-              href="#"
+              href="https://www.instagram.com/holiday.heavens?igsh=MWFqdTFrNzBjZmZjMg=="
               className="text-pink-700 opacity-80 transition-opacity hover:opacity-100"
             >
               <svg
@@ -190,7 +190,7 @@ const Footer = ({ setCurrentDestination }) => {
             </Typography>
             <Typography
               as="a"
-              href="#"
+              href="https://youtube.com/"
               className="text-red-700 opacity-80 transition-opacity hover:opacity-100"
             >
               <svg

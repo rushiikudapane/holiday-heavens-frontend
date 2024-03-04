@@ -170,7 +170,7 @@ const BookNow = ({ currentDestination }) => {
 
     if (validateFields()) {
       axios
-        .post(`http://localhost:5001/api/quotation/getQuotation`, {
+        .post(`${REACT_APP_SERVER_URL}/api/quotation/getQuotation`, {
           name,
           mailid,
           contact,

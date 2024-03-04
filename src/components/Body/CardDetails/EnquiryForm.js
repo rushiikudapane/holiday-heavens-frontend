@@ -88,7 +88,7 @@ const EnquiryForm = ({ currentDestination }) => {
 
   const makeEquiryRequest = (userData) => {
     axios
-      .post(`http://localhost:5001/api/enquiry/makeEnquiry`, userData)
+      .post(`${REACT_APP_SERVER_URL}/api/enquiry/makeEnquiry`, userData)
       .then((res) => {
         console.log(res.data);
         alert("Enquiry has been made sucessfully, we will contact you soon.");
