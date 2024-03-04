@@ -143,7 +143,7 @@ const Footer = ({ setCurrentDestination }) => {
                   color="blue-gray"
                   className=" font-bold text-sm pt-1 text-gray-600 font-poppins transition-colors hover:text-cyan-900 focus:text-blue-500"
                 >
-                  9130003737
+                  +91 9130003737
                 </Typography>
               </li>
             </ul>

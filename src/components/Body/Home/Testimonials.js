@@ -81,10 +81,7 @@ const Testimonials = () => {
                         {data.name}
                       </Typography>
 
-                      <Typography
-                        className="flex justify-start"
-                        color="blue-gray"
-                      >
+                      <Typography color="blue-gray">
                         {data.profession}
                       </Typography>
                     </div>
@@ -123,10 +120,7 @@ const Testimonials = () => {
                         {data.name}
                       </Typography>
 
-                      <Typography
-                        className="flex justify-start"
-                        color="blue-gray"
-                      >
+                      <Typography color="blue-gray">
                         {data.profession}
                       </Typography>
                     </div>
