@@ -10,7 +10,7 @@ import {
   Checkbox,
 } from "@material-tailwind/react";
 import logo from "../../../assets/holiday-heavens-logo.png";
-import tempImg from "../../../assets/tempDestImg.jpeg";
+import tempImg from "../../../assets/holiday-heavens-logo.png";
 import { Link } from "react-router-dom";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
@@ -33,12 +33,6 @@ const printDocument = () => {
 };
 
 const Quotation = ({ currentDestination }) => {
-  // const [adultCount, setAdultCount] = useState(0);
-  // const [childCount, setChildCount] = useState(0);
-  // const [totalCount, setTotalCount] = useState(0);
-  // const [totalCountFood, setTotalCountFood] = useState(0);
-  // const [vegCount, setVegCount] = useState(0);
-  // const [nonVegCount, setNonVegCount] = useState(0);
   const [amount, setAmount] = useState(0);
   const location = useLocation();
   const userData = location.state;
@@ -53,7 +47,7 @@ const Quotation = ({ currentDestination }) => {
       <div className="flex flex-row flex-wrap bg-blue-50">
         <div className="lg:w-2/5 px-5 py-5 flex flex-col items-center">
           <div>
-            <img src={currentDestination.set1Images[0]} className="w-96 h-80" />
+            <img src={tempImg} className="w-96 h-80" />
           </div>
           <div className="my-8">
             <Typography variant="h3">{userData.destinationName}</Typography>
