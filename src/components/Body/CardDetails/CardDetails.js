@@ -27,6 +27,9 @@ const CardDetails = ({ currentDestination }) => {
     <div className="bg-gray-100">
       <div className="flex flex-wrap">
         <div className="lg:w-3/5 bg-gray-100 px-5 py-5 items-center">
+          <Typography className="font-bold text-cyan-900 text-3xl my-3">
+            {savedCurrentDestination.name}
+          </Typography>
           <CardDetailsCarousel currentDestination={savedCurrentDestination} />
           {savedCurrentDestination.type === "camp" ? (
             <>

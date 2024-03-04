@@ -213,6 +213,15 @@ const Footer = ({ setCurrentDestination }) => {
           >
             &copy; 2024 Holiday Heavens
           </Typography>
+          <Typography
+            color="blue-gray"
+            className="text-white mt-7 text-center font-normal"
+          >
+            created by{" "}
+            <a href="https://www.linkedin.com/in/rushirajkudapane/">
+              Rushiraj Kudapane
+            </a>
+          </Typography>
         </CardBody>
       </Card>
     </div>

@@ -17,10 +17,13 @@ import jsPDF from "jspdf";
 
 const printDocument = () => {
   const input = document.getElementById("quotation");
-  html2canvas(input).then((canvas) => {
+  html2canvas(input, {
+    windowWidth: input.scrollWidth,
+    windowHeight: input.scrollHeight,
+  }).then((canvas) => {
     const imgData = canvas.toDataURL("image/png");
-    const pdf = new jsPDF("l", "pt", "a4");
-    pdf.addImage(imgData, "PNG", 0, 0, canvas.width * 0.5, canvas.height * 0.5);
+    const pdf = new jsPDF("l", "pt", [canvas.width, canvas.height]);
+    pdf.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height);
     pdf.save("holiday-heavens-quotation.pdf");
   });
 };
