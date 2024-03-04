@@ -22,7 +22,11 @@ const printDocument = () => {
     windowHeight: input.scrollHeight,
   }).then((canvas) => {
     const imgData = canvas.toDataURL("image/png");
-    const pdf = new jsPDF("l", "pt", [canvas.height, canvas.width]);
+    // Check if the user is on a mobile device
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    // Set the orientation based on the device
+    const orientation = isMobile ? "p" : "l";
+    const pdf = new jsPDF(orientation, "pt", [canvas.height, canvas.width]);
     pdf.addImage(imgData, "PNG", 0, 0, canvas.height, canvas.width);
     pdf.save("holiday-heavens-quotation.pdf");
   });
