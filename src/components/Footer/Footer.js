@@ -154,7 +154,7 @@ const Footer = ({ setCurrentDestination }) => {
           <div className="flex gap-4 text-blue-gray-900 justify-center">
             <Typography
               as="a"
-              href="https://facebook.com/"
+              href="https://www.facebook.com/share/nbaPGfPm1CiY9iYG/?mibextid=WC7FNe"
               className="text-blue-900 opacity-80 transition-opacity hover:opacity-100 hover:text-blue-900"
             >
               <svg
@@ -215,9 +215,9 @@ const Footer = ({ setCurrentDestination }) => {
           </Typography>
           <Typography
             color="blue-gray"
-            className="text-white mt-7 text-center font-normal"
+            className="text-white mt-7 text-sm text-center font-normal"
           >
-            created by{" "}
+            Designed and Developed by{" "}
             <a
               className="text-cyan-700 hover:text-white"
               href="https://www.linkedin.com/in/rushirajkudapane/"

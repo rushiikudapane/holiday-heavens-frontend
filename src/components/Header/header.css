@@ -1,0 +1,17 @@
+.title-font {
+  font-family: "Sofia", cursive;
+  font-weight: 1200;
+  font-size: 37px;
+  font-style: normal;
+}
+
+.sub-title-font {
+  font-family: "Fugaz One", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+}
+
+.moto {
+  font-size: 8px;
+}

@@ -6,6 +6,7 @@ import {
   Typography,
   IconButton,
 } from "@material-tailwind/react";
+import "./header.css";
 
 import logo from "../../assets/holiday-heavens-logo.png";
 
@@ -82,9 +83,17 @@ const Header = () => {
       <Navbar className="h-max max-w-full rounded-none px-2 py-0 lg:px-6 bg-gray-300 shadow-2xl border-t-0 border-r-0 border-l-0 border-b-4 border-cyan-900">
         <div className="flex items-center justify-between text-blue-gray-900">
           <a href="/">
-            <img src={logo} alt="logo" className="w-32" />
+            <img src={logo} alt="logo" className="w-20 p-0 m-0" />
           </a>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col pr-5">
+            <h1 className="title-font text-cyan-900">Holiday</h1>
+            <h3 className="sub-title-font">Heavens</h3>
+            <h6 className="flex flex-row justify-around text-orange-700 p-0 m-0 text-sm moto">
+              <p>Travel.</p>
+              <p> Discover.</p> <p>Repeat.</p>
+            </h6>
+          </div>
+          <div className="flex items-center gap-4 pl-6">
             <div className="mr-4 hidden lg:block">{navList}</div>
             <IconButton
               variant="text"
