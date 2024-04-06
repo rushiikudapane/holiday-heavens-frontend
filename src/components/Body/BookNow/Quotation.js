@@ -256,7 +256,7 @@ const Quotation = ({ currentDestination }) => {
                     *Inclusive all taxes
                   </Typography>
                   <Typography variant="h5" className="py-2 px-5 font-normal">
-                    Adavance Amount: <b>₹{userData.amount * 0.5}</b>
+                    Advance Amount: <b>₹{userData.amount * 0.5}</b>
                   </Typography>
                   <Typography variant="h5" className="py-2 px-5 font-normal">
                     Remaining Amount: <b>₹{userData.amount * 0.5}</b>
