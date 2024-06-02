@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import tempImg from "../../../assets/tempDestImg.jpeg";
+import logo from "../../../assets/holiday-heavens-logo.png";
 import {
   Button,
   Input,
@@ -16,6 +17,15 @@ const BookNow = ({ currentDestination }) => {
   let date = location.state;
   let parts = date.toString().split(" ");
   let trimmedDate = parts.slice(0, 4).join(" ");
+
+  const [formData, setFormData] = useState({
+    name: "",
+    mailid: "",
+    contact: "",
+    whatsapp: "",
+    question: "",
+  });
+
   const [adultCount, setAdultCount] = useState(0);
   const [childCount, setChildCount] = useState(0);
   const [totalCount, setTotalCount] = useState(0);
@@ -127,6 +137,8 @@ const BookNow = ({ currentDestination }) => {
     if (label == "question") {
       setQuestion(e.target.value);
     }
+
+    setFormData({ ...formData, [label]: e.target.value });
   };
 
   const validateFields = () => {
@@ -148,27 +160,55 @@ const BookNow = ({ currentDestination }) => {
       return false;
     }
     return true;
+
+    // const { name, mailid, contact, whatsapp } = formData;
+
+    // const nameRegex = /^[A-Za-z]+$/;
+    // const emailRegex = /^\S+@\S+\.\S+$/;
+    // const mobileRegex = /^\d{10}$/;
+
+    // if (!nameRegex.test(name)) {
+    //   alert("Name should only contain letters");
+    //   return false;
+    // }
+
+    // if (!emailRegex.test(mailid)) {
+    //   alert("Invalid email address");
+    //   return false;
+    // }
+
+    // if (!mobileRegex.test(contact) || contact.length !== 10) {
+    //   alert("Contact number should be 10 digits");
+    //   return false;
+    // }
+
+    // if (whatsapp.length !== 10) {
+    //   alert("Whatsapp number should be 10 digits");
+    //   return false;
+    // }
+
+    // return true;
   };
 
   const sendEmailandPrint = () => {
-    const destinationName = currentDestination.name;
-    const data = {
-      name,
-      mailid,
-      contact,
-      whatsapp,
-      question,
-      destinationName,
-      vegCount,
-      nonVegCount,
-      adultCount,
-      childCount,
-      totalCount,
-      trimmedDate,
-      amount,
-    };
-
     if (validateFields()) {
+      const destinationName = currentDestination.name;
+      const data = {
+        name,
+        mailid,
+        contact,
+        whatsapp,
+        question,
+        destinationName,
+        vegCount,
+        nonVegCount,
+        adultCount,
+        childCount,
+        totalCount,
+        trimmedDate,
+        amount,
+      };
+
       axios
         .post(
           `${process.env.REACT_APP_SERVER_URL}/api/quotation/getQuotation`,
@@ -200,7 +240,7 @@ const BookNow = ({ currentDestination }) => {
       <div className="flex flex-row flex-wrap bg-gray-100 h-full">
         <div className="lg:w-2/5 px-5 py-5 flex flex-col items-center">
           <div>
-            <img src={tempImg} className="w-96 h-80" />
+            <img src={logo} className="w-96 h-80" />
           </div>
           <div className="my-8">
             <Typography variant="h3">{currentDestination.name}</Typography>
@@ -252,7 +292,8 @@ const BookNow = ({ currentDestination }) => {
                   <div className="w-2/4">
                     <Typography variant="h5">Child (5-10 years)</Typography>
                     <Typography variant="h6" className="font-normal">
-                      ₹{currentDestination.discountedVegPrice}/- per person
+                      ₹{Math.ceil(currentDestination.discountedVegPrice / 2)}/-
+                      per person
                     </Typography>
                   </div>
                   <div className="flex flex-row items-center bg-gray-300 rounded-lg">
