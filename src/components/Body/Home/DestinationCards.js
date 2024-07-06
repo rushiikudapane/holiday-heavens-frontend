@@ -35,6 +35,7 @@ const DestinationCards = ({ setCurrentDestination }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        const startRequestTime = Date.now();
         const campResponse = await axios.get(
           `${process.env.REACT_APP_SERVER_URL}/api/destination/getDestinations/?type=camp`
         );
@@ -46,6 +47,9 @@ const DestinationCards = ({ setCurrentDestination }) => {
           `${process.env.REACT_APP_SERVER_URL}/api/test`
         );
 
+        const endRequestTime = Date.now();
+
+        console.log(`response time: ${endRequestTime - startRequestTime} ms`);
         console.log("test json data: ", test);
 
         // console.log(resortResponse.data);
