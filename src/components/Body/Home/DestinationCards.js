@@ -42,6 +42,12 @@ const DestinationCards = ({ setCurrentDestination }) => {
           `${process.env.REACT_APP_SERVER_URL}/api/destination/getDestinations/?type=resort`
         );
 
+        const test = await axios.get(
+          `${process.env.REACT_APP_SERVER_URL}/api/test`
+        );
+
+        console.log("test json data: ", test);
+
         // console.log(resortResponse.data);
         // console.log(campResponse.data);
         setCampData(campResponse.data);
